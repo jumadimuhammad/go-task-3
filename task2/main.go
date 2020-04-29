@@ -18,12 +18,10 @@ func main() {
 		}
 	}
 
-	fmt.Println(temp, result)
-
 	status, ok := Find(temp)
-	fmt.Println(ok)
+
 	if !ok {
-		fmt.Println("Result :", result[0], ", Status", status)
+		fmt.Println("Result :", result[0], ", Status :", status)
 	} else {
 		fmt.Println(status)
 	}
