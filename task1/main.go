@@ -3,67 +3,34 @@ package main
 import "fmt"
 
 func main() {
-	// var produk1 = map[string]interface{}{
-	// 	"namaBarang":  "Baju panjang",
-	// 	"hargaBarang": "Rp 200.000",
-	// 	"stokBarang":  9,
-	// }
+	var nama = map[int]string{}
+	var harga = map[int]string{}
+	var stok = map[int]int{}
 
-	// var produk2 = map[string]interface{}{
-	// 	"namaBarang":  "Celana jeans",
-	// 	"hargaBarang": "Rp 400.000",
-	// 	"stokBarang":  10,
-	// }
+	nama[0] = "Baju panjang"
+	harga[0] = "Rp. 200.000"
+	stok[0] = 8
 
-	// var produk3 = map[string]interface{}{
-	// 	"namaBarang":  "Rok mini",
-	// 	"hargaBarang": "Rp 400.000",
-	// 	"stokBarang":  4,
-	// }
+	nama[1] = "Celana panjang"
+	harga[1] = "Rp. 300.000"
+	stok[1] = 9
 
-	// var produk4 = map[string]interface{}{
-	// 	"namaBarang":  "Hoddie",
-	// 	"hargaBarang": "Rp 500.000",
-	// 	"stokBarang":  14,
-	// }
+	nama[2] = "Rok mini"
+	harga[2] = "Rp. 400.000"
+	stok[2] = 19
 
-	// if produk1["stokBarang"].(int) < 10 {
-	// 	fmt.Println("Nama barang : ", produk1["namaBarang"].(string))
-	// 	fmt.Println("Harga barang : ", produk1["hargaBarang"].(string))
-	// 	fmt.Println("Stok barang : ", produk1["stokBarang"].(int))
-	// }
+	nama[3] = "Hoodie"
+	harga[3] = "Rp. 500.000"
+	stok[3] = 2
 
-	// if produk2["stokBarang"].(int) < 10 {
-	// 	fmt.Println("Nama barang : ", produk2["namaBarang"].(string))
-	// 	fmt.Println("Harga barang : ", produk2["hargaBarang"].(string))
-	// 	fmt.Println("Stok barang : ", produk2["stokBarang"].(int))
-	// }
-
-	// if produk3["stokBarang"].(int) < 10 {
-	// 	fmt.Println("Nama barang : ", produk3["namaBarang"].(string))
-	// 	fmt.Println("Harga barang : ", produk3["hargaBarang"].(string))
-	// 	fmt.Println("Stok barang : ", produk3["stokBarang"].(int))
-	// }
-
-	// if produk4["stokBarang"].(int) < 10 {
-	// 	fmt.Println("Nama barang : ", produk4["namaBarang"].(string))
-	// 	fmt.Println("Harga barang : ", produk4["hargaBarang"].(string))
-	// 	fmt.Println("Stok barang : ", produk4["stokBarang"].(int))
-	// }
-
-	var product = []map[string]interface{}{
-		{"namaProduct": "Baju panjang", "hargaProduct": "Rp. 300.000", "stockProduct": 8},
-		{"namaProduct": "Celana Jeans", "hargaProduct": "Rp. 400.000", "stockProduct": 9},
-		{"namaProduct": "Hoodie", "hargaProduct": "Rp. 300.000", "stockProduct": 12},
-		{"namaProduct": "Rok mini", "hargaProduct": "Rp. 100.000", "stockProduct": 2},
-	}
-
-	for _, item := range product {		
-		if item["stockProduct"].(int) < 10 {
-			fmt.Println("Nama produk :", item["namaProduct"])
-			fmt.Println("Harga produk :", item["hargaProduct"])
-			fmt.Println("Stok produk :", item["stockProduct"])
-			fmt.Println("------------------------------------------")
+	fmt.Println("List Stok Barang")
+	fmt.Println("-----------------------------------------")
+	for index, value := range stok {
+		if value < 10 {
+			fmt.Println("Nama barang  : ", nama[index])
+			fmt.Println("Harga barang : ", harga[index])
+			fmt.Println("Stok barang  : ", stok[index])
+			fmt.Println("-----------------------------------------")
 		}
 	}
 
