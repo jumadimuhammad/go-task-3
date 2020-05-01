@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var nama = map[int]string{}
-	var harga = map[int]string{}
-	var stok = map[int]int{}
+	nama := make(map[int]string)
+	harga := make(map[int]string)
+	stok := make(map[int]int)
 
 	nama[0] = "Baju panjang"
 	harga[0] = "Rp. 200.000"
@@ -33,5 +33,4 @@ func main() {
 			fmt.Println("-----------------------------------------")
 		}
 	}
-
 }
